@@ -1,14 +1,18 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../svg/Logo";
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
+import CartButton from "../cart/CartButton";
 
 const NavBar = () => {
 
-    const value = useSelector(state => state.counter.initialValue);
-    const total = useSelector(state => state.cart.total);
+    //const value = useSelector(state => state.counter.initialValue);
+    //const total = useSelector(state => state.cart.total);
 
-    console.log(value);
-    console.log(total);
+    //console.log(value);
+    //console.log(total);
+
+    const items = useSelector(state => state.cart.items);
+    //const cant = items.length;
 
     const btnLink = "block inline-block py-1 text-black hover:text-primary cursor-pointer mr-4";
     const activeLink = "block inline-block py-1 text-primary mr-4";
@@ -34,7 +38,7 @@ const NavBar = () => {
                             className={({ isActive }) => isActive ? "btn-primary-active" : "btn-primary"}
                         >Login</NavLink>
                         <NavLink to="/signin" className={({ isActive }) => isActive ? activeLink : btnLink}>Signin</NavLink>
-                        {value}
+                        <CartButton></CartButton>
                     </div>
                 </div>
             </nav>

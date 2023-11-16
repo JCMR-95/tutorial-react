@@ -8,6 +8,7 @@ import About from './pages/About';
 import Login from './pages/Login';
 import Signin from './pages/Signin';
 import Products from "./pages/Products";
+import Checkout from "./pages/Checkout";
 //import NotFound from './pages/NotFound';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signin" element={<Signin></Signin>}></Route>
           <Route path="/products/:id" element={<Products></Products>}></Route>
+          <Route path="/checkout" element={<Checkout></Checkout>}></Route>
           <Route path="*" element={<Navigate to="/"></Navigate>}></Route>
         </Routes>
       </Layout>
