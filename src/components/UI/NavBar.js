@@ -37,7 +37,7 @@ const NavBar = () => {
                         <NavLink to="/login"
                             className={({ isActive }) => isActive ? "btn-primary-active" : "btn-primary"}
                         >Login</NavLink>
-                        <NavLink to="/signin" className={({ isActive }) => isActive ? activeLink : btnLink}>Signin</NavLink>
+                        <NavLink to="/signup" className={({ isActive }) => isActive ? activeLink : btnLink}>Sign Up</NavLink>
                         <CartButton></CartButton>
                     </div>
                 </div>
